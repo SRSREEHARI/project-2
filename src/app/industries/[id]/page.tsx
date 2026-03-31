@@ -24,7 +24,7 @@ export default function IndustryPage() {
       <section style={{
         position: 'relative',
         padding: '180px 80px 80px',
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(https://bzanalytics.ai/assets/images/backgrounds/page-header-bg.jpg)',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/images/backgrounds/page-header-bg.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         textAlign: 'center',
@@ -44,10 +44,10 @@ export default function IndustryPage() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px', flexWrap: 'wrap', gap: '20px' }}>
           <div>
             <p style={{ color: '#ff6b00', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '16px' }}>
-              metaverse and gaming projects showcase
+              {industry.title} projects showcase
             </p>
             <h2 style={{ fontSize: '52px', fontWeight: 900, lineHeight: 1.1, margin: 0 }}>
-              Explore our metaverse<br /> and gaming projects
+              Explore our {industry.title}<br /> projects
             </h2>
           </div>
           <Link href="/portfolio" style={{
@@ -70,7 +70,7 @@ export default function IndustryPage() {
           {industry.portfolio.map((project: PortfolioItem, idx: number) => (
             <Link
               key={project.id}
-              href={`/industries/metaverse-gaming/portfolio/${getSlug(project.id)}`}
+              href={`/industries/${industry.id}/portfolio/${getSlug(project.id)}`}
               style={{ textDecoration: 'none' }}
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
@@ -91,7 +91,7 @@ export default function IndustryPage() {
                     transition: 'transform 0.6s ease',
                     transform: hoveredIdx === idx ? 'scale(1.08)' : 'scale(1)',
                   }}
-                  onError={(e) => { e.currentTarget.src = 'https://bzanalytics.ai/assets/images/project/dubai.jpg'; }}
+                  onError={(e) => { e.currentTarget.src = '/assets/images/project/dubai.jpg'; }}
                 />
                 <div style={{
                   position: 'absolute',
