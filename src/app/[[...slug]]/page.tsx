@@ -1,4 +1,4 @@
-"use client";
+// Temporarily disabled catch-all route to fix conflict with page.tsx\n// "use client";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
