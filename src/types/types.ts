@@ -27,5 +27,7 @@ export type Industry = {
   title: string;
   link: string;
   image: string;
+  subtitle?: string;
+  description?: string;
   portfolio: PortfolioItem[];
 };
