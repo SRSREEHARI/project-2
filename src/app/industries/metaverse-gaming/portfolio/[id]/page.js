@@ -1,3 +1,1 @@
-"use client";
-
-import Link from "
+// DELETED DUPLICATE - use page.tsx
