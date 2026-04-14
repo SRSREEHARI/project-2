@@ -1,0 +1,511 @@
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 15px;
+  right: 15px;
+  background-color: #000000;
+  color: orange;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px 1px #999;
+  z-index: 100;
+}
+
+.float:hover {
+  color: white;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 1000;
+  background: black;
+  color: white;
+  font-size: 15px;
+  padding: 5px 7px;
+  border: 0.5px solid;
+}
+
+@media only screen and (max-width: 1200px) {
+  .theme-toggle {
+    z-index: 500;
+  }
+
+  .mobile-nav__content {
+    z-index: 1000;
+  }
+}
+
+/* Flex container for the card row */
+.industries-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Individual card styles */
+.card {
+  flex: 0 0 auto;
+  width: 380px;
+  height: 250px;
+  margin-right: 24px;
+  box-sizing: border-box;
+  background-size: cover;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card h3 {
+  background: rgba(0, 0, 0, 0.591);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  font-weight: 500;
+}
+
+/* Hover effect to increase card size */
+.card:hover {
+  width: 450px;
+  height: 300px;
+  z-index: 0;
+}
+
+.card-placeholder {
+  width: 450px;
+  height: 300px;
+  visibility: hidden;
+}
+
+/* Styles for navigation arrows */
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  padding: 9px;
+  position: absolute;
+  border: 2px solid rgb(255, 255, 255);
+  color: white;
+  z-index: 1;
+  background: black;
+}
+
+.ogency-btn:hover {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.left {
+  left: 5px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.right {
+  right: 5px;
+  z-index: 1;
+}
+
+/* Industry Page */
+
+/* Container for the section */
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* Left and right chevrons */
+.chevron {
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* Image container */
+.image-container {
+  width: 560px;
+  height: 339px;
+  overflow: hidden;
+  border-radius: 0px;
+  text-align: center;
+}
+
+/* Image styling */
+.section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text container */
+.text-container {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 550px;
+  text-align: center;
+}
+
+/* H3 text styling */
+.section-text {
+  font-size: 60px;
+  margin: 0;
+}
+
+@media screen and (max-width:1000px) {
+  .section-container {
+    flex-direction: column;
+  }
+
+  .image-container {
+    margin-top: 20px;
+  }
+
+  .project-one .ogency-btn {
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  .project-one .ogency-btn:hover {
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  a.ogency-btn {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .text-container {
+    width: 400px;
+  }
+
+  .section-text {
+    font-size: 47px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .project-one__item__wrapper .show {
+    width: 100%;
+    display: block !important;
+  }
+
+  .project-one__item__btn {
+    display: none;
+  }
+
+  .project-one__item__number::before {
+    position: relative;
+  }
+
+  .project-one__item__wrapper {
+    display: flex;
+  }
+}
+
+
+.projects_five.show {
+  display: block !important;
+}
+
+.project-two__item {
+  position: relative;
+  overflow: hidden;
+  min-height: 28.90625vw !important;
+  border-radius: 10px;
+  margin: 10px;
+  transition: min-height 0.3s ease-in-out;
+}
+
+.project-two__item__image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-two__item {
+  width: 100%;
+  height: 100%;
+}
+
+.project-two__item__contents {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.project-two__item__content h3,
+.project-two__item__content p {
+  margin: 0;
+  color: #fff;
+}
+
+.project-two__item__title {
+  padding: 15px 0;
+}
+
+.project-two__item:hover .project-two__item__contents {
+  opacity: 1;
+  transform: translateY(-30px);
+}
+
+.project-two__item:hover .project-two__item__image {
+  transform: translateY(-20%);
+}
+
+.project-two__item:hover .industry-description {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.industry-description {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(30px);
+}
+
+.know-more {
+  background-color: black;
+  border: 2px solid white;
+}
+
+.know-more.ogency-btn {
+  padding: 10px 30px;
+}
+
+.col-lg-4.col-md-6 {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 450px) {
+  .project-two__item__title {
+    margin-bottom: -15px;
+  }
+
+  .know-more.ogency-btn {
+    padding: 5px 40px;
+  }
+
+  .project-two__item__title {
+    margin-bottom: -20px;
+  }
+
+  .industry-description {
+    font-size: 13px;
+    margin-top: 3px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-two__item__title {
+    margin-bottom: -27px;
+  }
+
+  .know-more.ogency-btn {
+    padding: 4px 25px;
+  }
+
+  .industry-description {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .project-two__item__title {
+    margin-bottom: -4%;
+  }
+
+  .project-two__item {
+    height: 400px;
+  }
+}
+
+.custom-card__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  background: black;
+}
+
+div#error-recaptcha {
+  width: fit-content;
+  padding-bottom: 11px;
+}
+
+
+
+/* tost style */
+/* Toast notification styling */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  max-width: 400px;
+  z-index: 9999;
+  transform: translateX(110%);
+  transition: transform 0.3s ease;
+  color: #333;
+  /* Ensures text is dark and readable on white background */
+}
+
+.toast-notification.show {
+  transform: translateX(0);
+}
+
+.toast-icon {
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+#toast-icon-success {
+  color: #4caf50;
+}
+
+#toast-icon-error {
+  color: #f44336;
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  /* Ensure text color is dark for readability */
+  font-weight: 500;
+  /* Slightly bolder for better readability */
+}
+
+.toast-close {
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.7;
+  color: #333;
+  /* Ensure close button is visible */
+}
+
+.toast-close:hover {
+  opacity: 1;
+}
+
+/* Success toast */
+.toast-notification.success {
+  border-left: 4px solid #4caf50;
+  background-color: #f0fff0;
+  /* Very light green background for success toast */
+}
+
+/* Error toast */
+.toast-notification.error {
+  border-left: 4px solid #f44336;
+  background-color: #fff6f6;
+  /* Very light red background for error toast */
+}
+
+/* Email validation message */
+.email-input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.email-validation-message {
+  font-size: 12px;
+  color: #f44336;
+  margin-top: 4px;
+  padding-left: 4px;
+  min-height: 16px;
+}
+
+/* Fix border thickness for error states */
+.input-error {
+  border: 1px solid #f44336 !important;
+  /* Thinner border - 1px instead of default */
+  box-shadow: 0 0 0 1px rgba(244, 67, 54, 0.2);
+  /* Subtle glow instead of thick border */
+  animation: shake 0.6s;
+}
+
+/* Shake animation for error */
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.service-card {
+  height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .g-recaptcha {
+    transform: scale(0.77);
+    transform-origin: 0 0;
+  }
+
+  div#recaptcha-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding-left:20px;
+  }
+}
